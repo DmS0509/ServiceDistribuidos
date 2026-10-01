@@ -1,0 +1,29 @@
+#Docker compose para la maaquina 2 con 3 contenedores de calculadora
+
+services:
+  calc-B-0:
+    image: calculadora:latest
+    container_name: calc-B-0
+    environment:
+      CONTAINER_NAME: calc-B-0
+    ports:
+      - "30000:8080"
+    restart: unless-stopped
+
+  calc-B-1:
+    image: calculadora:latest
+    container_name: calc-B-1
+    environment:
+      CONTAINER_NAME: calc-B-1
+    ports:
+      - "30000:8080"
+    restart: unless-stopped
+
+  calc-B-2:
+    image: calculadora:latest
+    container_name: calc-B-2
+    environment:
+      CONTAINER_NAME: calc-B-2
+    ports:
+      - "30000:8080"
+    restart: unless-stopped
